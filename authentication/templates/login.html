@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script type="text/javascript" src ="{% static 'js/loginOperation.js' %}"></script>
+</head>
+<body>
+
+<h2>Login Form</h2>
+<div id ='status'>
+<form method="post">
+    <div class="imgcontainer">
+    <img src="{% static 'images/download.png'%}" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" id="username" placeholder="Enter Username" name="uname" required>
+      <br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+        <br>
+    <button type="button" id="login" onclick="loginAuthentication()">Login</button>
+      <br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+</div>
+
+</body>
+</html>
