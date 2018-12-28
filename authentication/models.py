@@ -15,8 +15,6 @@ class User(Base):
     password = Column(String(120))
     last_login = Column(DateTime)
     created_date = Column(DateTime, default=datetime.datetime.now())
-    token = relationship('token', back_populates = 'user')
-
 
 # Token model - storing token while userlogin
 class Token(Base):

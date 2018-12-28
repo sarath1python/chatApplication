@@ -4,6 +4,6 @@ from authentication import views
 
 urlpatterns = [
     path('',views.login, name = "login"),
-    path('user/', views.authentication, name="authentication"),
-
+    path('validate_user/', views.authentication, name="authentication"),
+    path('create_user/',views.createUser, name="create_user")
 ]
